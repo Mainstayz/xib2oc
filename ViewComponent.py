@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 
-class ViewComponent:
+class View:
 	
 	def __init__(self,name,dic):
 		self.name = name
@@ -51,91 +51,91 @@ class ViewComponent:
 
 
 
-dic = {
-	"autoresizesSubviews": "NO",
-	"opaque": "NO",
-	"hidden": "YES",
-	"color": [
-		{
-			"colorSpace": "custom",
-			"white": "0.66666666666666663",
-			"alpha": 1,
-			"customColorSpace": "genericGamma22GrayColorSpace",
-			"key": "backgroundColor"
-		},
-		{
-			"red": 1,
-			"colorSpace": "custom",
-			"green": "0.83015773116334923",
-			"blue": 0.39770596420388293,
-			"alpha": 1,
-			"customColorSpace": "sRGB",
-			"key": "tintColor"
-		}
-	],
-	"autoresizingMask": {
-		"flexibleMaxX": "YES",
-		"key": "autoresizingMask",
-		"flexibleMaxY": "YES"
-	},
-	"customModule": "Charts",
-	"multipleTouchEnabled": "YES",
-	"semanticContentAttribute": "forceLeftToRight",
-	"rect": [
-		{
-			"x": 61,
-			"width": 240,
-			"y": 225,
-			"key": "frame",
-			"height": 128
-		},
-		{
-			"x": "0.20000000000000001",
-			"width": "0.40000000000000002",
-			"y": "0.29999999999999999",
-			"key": "contentStretch",
-			"height": 0.5
-		}
-	],
-	"clearsContextBeforeDrawing": "NO",
-	"fixedFrame": "YES",
-	"translatesAutoresizingMaskIntoConstraints": "NO",
-	"contentMode": "scaleToFill",
-	"alpha": "0.94999999999999996",
-	"customClass": "BarChartView",
-	"userDefinedRuntimeAttributes": {
-		"userDefinedRuntimeAttribute": [
-			{
-				"keyPath": "pttt",
-				"type": "string",
-				"value": "asd"
-			},
-			{
-				"keyPath": "keyPath",
-				"type": "boolean",
-				"value": "YES"
-			}
-		]
-	},
-	"restorationIdentifier": 33,
-	"tag": 1220,
-	"id": "2Gd-j0-l11",
-	"clipsSubviews": "YES"
-}
+#dic = {
+#	"autoresizesSubviews": "NO",
+#	"opaque": "NO",
+#	"hidden": "YES",
+#	"color": [
+#		{
+#			"colorSpace": "custom",
+#			"white": "0.66666666666666663",
+#			"alpha": 1,
+#			"customColorSpace": "genericGamma22GrayColorSpace",
+#			"key": "backgroundColor"
+#		},
+#		{
+#			"red": 1,
+#			"colorSpace": "custom",
+#			"green": "0.83015773116334923",
+#			"blue": 0.39770596420388293,
+#			"alpha": 1,
+#			"customColorSpace": "sRGB",
+#			"key": "tintColor"
+#		}
+#	],
+#	"autoresizingMask": {
+#		"flexibleMaxX": "YES",
+#		"key": "autoresizingMask",
+#		"flexibleMaxY": "YES"
+#	},
+#	"customModule": "Charts",
+#	"multipleTouchEnabled": "YES",
+#	"semanticContentAttribute": "forceLeftToRight",
+#	"rect": [
+#		{
+#			"x": 61,
+#			"width": 240,
+#			"y": 225,
+#			"key": "frame",
+#			"height": 128
+#		},
+#		{
+#			"x": "0.20000000000000001",
+#			"width": "0.40000000000000002",
+#			"y": "0.29999999999999999",
+#			"key": "contentStretch",
+#			"height": 0.5
+#		}
+#	],
+#	"clearsContextBeforeDrawing": "NO",
+#	"fixedFrame": "YES",
+#	"translatesAutoresizingMaskIntoConstraints": "NO",
+#	"contentMode": "scaleToFill",
+#	"alpha": "0.94999999999999996",
+#	"customClass": "BarChartView",
+#	"userDefinedRuntimeAttributes": {
+#		"userDefinedRuntimeAttribute": [
+#			{
+#				"keyPath": "pttt",
+#				"type": "string",
+#				"value": "asd"
+#			},
+#			{
+#				"keyPath": "keyPath",
+#				"type": "boolean",
+#				"value": "YES"
+#			}
+#		]
+#	},
+#	"restorationIdentifier": 33,
+#	"tag": 1220,
+#	"id": "2Gd-j0-l11",
+#	"clipsSubviews": "YES"
+#}
 
 #if hasattr(dic, 'tag'):
 #print(dic['ttt'])
-a = [1,2,3,4]
-
-for b in a:
-	print(b)
-
-
-component = ViewComponent('rr',dic)
-rect = component.clsInfo['rect']
-print(component.generateInitializeCode())
-print(component.appendCode('rect',rect))
-print(component.appendCode('color',component.clsInfo['color']))
+#a = [1,2,3,4]
+#
+#for b in a:
+#	print(b)
+#
+#
+#component = ViewComponent('rr',dic)
+#rect = component.clsInfo['rect']
+#print(component.generateInitializeCode())
+#print(component.appendCode('rect',rect))
+#print(component.appendCode('color',component.clsInfo['color']))
 #str =  component.appendCode('rect', {'key':'frame','x':0,'y':0,'width':123,'height':3333})
 #print(str)
 #color =  component.appendCode('color', {
