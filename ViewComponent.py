@@ -18,6 +18,7 @@ class View:
 				if value['key'] == 'frame' and 'fixedFrame' in self.clsInfo:
 					codes.append("{}.frame = CGRectMake({}, {}, {}, {});".format(self.name, value['x'], value['y'], value['width'], value['height']))
 			if type(value) == list:
+				print('hahhaa')
 				for dic in value:
 					print(dic)
 					codes.append("{}.{} = CGRectMake({}, {}, {}, {});".format(self.name, dic['key'],dic['x'], dic['y'], dic['width'], dic['height']))
