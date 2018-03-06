@@ -3,7 +3,8 @@
 
 class View:
 	
-	def __init__(self,name,dic):
+	def __init__(self,superView,name,dic):
+		self.superView = superView
 		self.name = name
 		self.clsInfo = dic
 	
@@ -11,47 +12,79 @@ class View:
 		return "UIView *{} = [[UIView alloc] init];".format(self.name)
 	
 		
-	def appendCode(self, prop, value):
-		codes = []
-		if prop == 'rect':
+	def generateCode(self, codeArray, level):
+		
+		code = list()
+		init = self.generateInitializeCode()
+		code.append(init)
+		#contentModel
+		if 'contentMode' in self.clsInfo:
+			value = "{}.contentMode = {};".format(self.name,self.getContentModel(self.clsInfo['contentMode']))
+			code.append(value)	
+		
+		
+		#color
+		if 'color' in self.clsInfo:
+			value = self.clsInfo['color']
 			if type(value) == dict:
-				if value['key'] == 'frame' and 'fixedFrame' in self.clsInfo:
-					codes.append("{}.frame = CGRectMake({}, {}, {}, {});".format(self.name, value['x'], value['y'], value['width'], value['height']))
-			if type(value) == list:
-				print('hahhaa')
-				for dic in value:
-					print(dic)
-					codes.append("{}.{} = CGRectMake({}, {}, {}, {});".format(self.name, dic['key'],dic['x'], dic['y'], dic['width'], dic['height']))
-		if prop == 'color':
-			if type(value) == dict:
-				if value['key'] == 'backgroundColor': 
 					color = self.appendUIColor(value)
-					codes.append("{}.backgroundColor = {};".format(self.name, color))
+					code.append(color)
 			if type(value) == list:
 				for dic in value:
 					color = self.appendUIColor(dic)
-					codes.append("{}.{} = {};".format(self.name,dic['key'],color))
-		return codes
+					code.append(color)
 					
+		#frame
+		if 'rect' in self.clsInfo:
+			value = self.clsInfo['rect']
+			if type(value) == dict:
+					rect = self.appendRect(value)
+					code.append(rect)
+			if type(value) == list:
+				for dic in value:
+					rect = self.appendRect(value)
+					code.append(rect)
+		
+		
+		if self.superView:
+			print(self.superView)
+		else:
+			print('么哦有苏')
 			
-	def appendUIColor(self,dic):			
+			
+		codeArray.append(code) 
+		return codeArray
+
+	def appendRect(self,dic):
+		if dic['key'] == 'frame' and 'fixedFrame' in self.clsInfo:
+			return "{}.frame = CGRectMake({}, {}, {}, {});".format(self.name, value['x'], value['y'], value['width'], value['height'])
+		else:
+			return "{}.{} = CGRectMake({}, {}, {}, {});".format(self.name, dic['key'],dic['x'], dic['y'], dic['width'], dic['height'])
+
+		
+			
+	def appendUIColor(self,dic):	
+		code = str()		
 		if 'colorSpace' in dic:
 			if dic['colorSpace'] == 'calibratedRGB' or dic['colorSpace'] == 'deviceRGB':
-				return "[UIColor colorWithRed:{} green:{} blue:{} alpha:{}]".format(dic['red'], dic['green'],dic['blue'],dic['alpha'])
+				code = "[UIColor colorWithRed:{} green:{} blue:{} alpha:{}]".format(dic['red'], dic['green'],dic['blue'],dic['alpha'])
 			elif dic['colorSpace'] == 'calibratedWhite':
-				return "[UIColor colorWithWhite:{} alpha:{}]".format(dic['white'], dic['alpha'])
+				code = "[UIColor colorWithWhite:{} alpha:{}]".format(dic['white'], dic['alpha'])
 		if 'customColorSpace' in dic:
 			if dic['customColorSpace'] == 'sRGB':
-				return "[UIColor colorWithRed:{} green:{} blue:{} alpha:{}]".format(dic['red'], dic['green'],dic['blue'],dic['alpha'])
+				code = "[UIColor colorWithRed:{} green:{} blue:{} alpha:{}]".format(dic['red'], dic['green'],dic['blue'],dic['alpha'])
 			elif dic['customColorSpace'] == 'genericGamma22GrayColorSpace':
-				return "[UIColor colorWithWhite:{} alpha:{}]".format(dic['white'], dic['alpha'])
+				code = "[UIColor colorWithWhite:{} alpha:{}]".format(dic['white'], dic['alpha'])
+		return "{}.{} = {};".format(self.name,dic['key'],code)
 		
 		
 	def getContentModel(self,modelType):
 		return 'UIViewContentMode'+modelType[:1].upper()+modelType[1:]
 
 
-
+	def tabCode(self,level):
+		return level * 4 * ' '
+		
 #dic = {
 #	"autoresizesSubviews": "NO",
 #	"opaque": "NO",
