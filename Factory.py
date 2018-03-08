@@ -18,6 +18,17 @@ class Factory:
 		conponent = View(superView, name, dic)
 		return conponent
 	
+	# 递归，从最顶部视图开始
+	# views 每个视图的代码
+	# className 类名
+	def recursionViews(self,views,cls,infoDic,instanceName,superViewName):
+		if 'subviews' in infoDic:
+			for key in infoDic['subviews']:
+				clsDic = infoDic['subviews'][key]
+				self.recursionViews(views, key, clsDic,clsDic['id'],instanceName)
+		views.append("我是{} 爸爸是{} 我叫{}".format(cls, superViewName,instanceName))
+		return views;			
+	
 
 
 with open('test.json', 'r') as f:
@@ -25,12 +36,14 @@ with open('test.json', 'r') as f:
 
 objects = data['document']['objects']['view']
 
+#print(data)
 
 f = Factory()
 array = list()
+array.append('6666666')
 v = f.generateHierarchy(array, '爸爸', 'root', objects, 0)
-
-print(v)
+views = f.recursionViews([],'View',objects,'son','father')
+print(views)
 #component = View('rr','wwww',objects)
 ##
 #code = component.generateCode([], 1)

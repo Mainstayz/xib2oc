@@ -47,9 +47,9 @@ class View:
 		
 		
 		if self.superView:
-			print(self.superView)
-		else:
-			print('么哦有苏')
+			addSubview = "[{} addSubview:{}];".format(self.superView,self.name)
+			code.append(addSubview)
+		
 			
 			
 		codeArray.append(code) 
