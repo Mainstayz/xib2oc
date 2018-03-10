@@ -10,24 +10,40 @@ class Factory:
 	# name 
 	# dic
 	# level
-	def generateHierarchy(self,code,superView,name,dic,level):
-		instance = self.map('view', superView, name, dic)
-		return instance.generateCode(code, 0)
+	def generateHierarchy(self,superView,key,dic):
+		instance = self.map(key)
+		instance.clsInfo = dic
+		instance.name = dic['id']
+		instance.superView = superView
+		codes = instance.generateInitializeCode([])
+		codes = instance.generateCode(codes)
+		codes = instance.addedSubview(codes)
+		codes.append('\n')
+		return codes
 	
-	def map(self,cls,superView,name,dic):
-		conponent = View(superView, name, dic)
-		return conponent
-	
+	def map(self,key):
+		return View()
+		if key == 'view':
+			return View()
+		else:
+			return None
+				
 	# 递归，从最顶部视图开始
 	# views 每个视图的代码
 	# className 类名
-	def recursionViews(self,views,cls,infoDic,instanceName,superViewName):
+	def recursionViews(self,codes,cls,infoDic,superViewName):
+		for key in infoDic:
+			print(key,' == ')
+		
+		print('=========')
+		
+		codes.append(self.generateHierarchy(superViewName, cls, infoDic))
 		if 'subviews' in infoDic:
 			for key in infoDic['subviews']:
 				clsDic = infoDic['subviews'][key]
-				self.recursionViews(views, key, clsDic,clsDic['id'],instanceName)
-		views.append("我是{} 爸爸是{} 我叫{}".format(cls, superViewName,instanceName))
-		return views;			
+				self.recursionViews(codes, key, clsDic,infoDic['id'])
+		
+		return codes;			
 	
 
 
@@ -39,11 +55,10 @@ objects = data['document']['objects']['view']
 #print(data)
 
 f = Factory()
-array = list()
-array.append('6666666')
-v = f.generateHierarchy(array, '爸爸', 'root', objects, 0)
-views = f.recursionViews([],'View',objects,'son','father')
-print(views)
+views = f.recursionViews([],'View',objects,'father')
+
+#for subView in views:
+#	print('  \n'.join(subView))
 #component = View('rr','wwww',objects)
 ##
 #code = component.generateCode([], 1)

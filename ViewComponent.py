@@ -2,25 +2,22 @@
 # -*- coding: UTF-8 -*-
 
 class View:
+
+	superView = str()
+	name = str()
+	clsInfo = dict()
 	
-	def __init__(self,superView,name,dic):
-		self.superView = superView
-		self.name = name
-		self.clsInfo = dic
-	
-	def generateInitializeCode(self):
-		return "UIView *{} = [[UIView alloc] init];".format(self.name)
+
+	def generateInitializeCode(self,codes):
+		codes.append("UIView *{} = [[UIView alloc] init];".format(self.name))
+		return codes
 	
 		
-	def generateCode(self, codeArray, level):
-		
-		code = list()
-		init = self.generateInitializeCode()
-		code.append(init)
+	def generateCode(self,codes):		
 		#contentModel
 		if 'contentMode' in self.clsInfo:
 			value = "{}.contentMode = {};".format(self.name,self.getContentModel(self.clsInfo['contentMode']))
-			code.append(value)	
+			codes.append(value)	
 		
 		
 		#color
@@ -28,36 +25,36 @@ class View:
 			value = self.clsInfo['color']
 			if type(value) == dict:
 					color = self.appendUIColor(value)
-					code.append(color)
+					codes.append(color)
 			if type(value) == list:
 				for dic in value:
 					color = self.appendUIColor(dic)
-					code.append(color)
+					codes.append(color)
 					
 		#frame
 		if 'rect' in self.clsInfo:
 			value = self.clsInfo['rect']
 			if type(value) == dict:
 					rect = self.appendRect(value)
-					code.append(rect)
+					codes.append(rect)
 			if type(value) == list:
 				for dic in value:
-					rect = self.appendRect(value)
-					code.append(rect)
+					rect = self.appendRect(dic)
+					codes.append(rect)
 		
-		
+		return codes
+
+
+	def addedSubview(self,codes):
 		if self.superView:
 			addSubview = "[{} addSubview:{}];".format(self.superView,self.name)
-			code.append(addSubview)
-		
-			
-			
-		codeArray.append(code) 
-		return codeArray
+			codes.append(addSubview)
+		return codes
+
 
 	def appendRect(self,dic):
 		if dic['key'] == 'frame' and 'fixedFrame' in self.clsInfo:
-			return "{}.frame = CGRectMake({}, {}, {}, {});".format(self.name, value['x'], value['y'], value['width'], value['height'])
+			return "{}.frame = CGRectMake({}, {}, {}, {});".format(self.name, dic['x'], dic['y'], dic['width'], dic['height'])
 		else:
 			return "{}.{} = CGRectMake({}, {}, {}, {});".format(self.name, dic['key'],dic['x'], dic['y'], dic['width'], dic['height'])
 
@@ -82,8 +79,7 @@ class View:
 		return 'UIViewContentMode'+modelType[:1].upper()+modelType[1:]
 
 
-	def tabCode(self,level):
-		return level * 4 * ' '
+
 		
 #dic = {
 #	"autoresizesSubviews": "NO",
