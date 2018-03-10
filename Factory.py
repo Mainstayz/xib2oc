@@ -33,15 +33,22 @@ class Factory:
 	# className 类名
 	def recursionViews(self,codes,cls,infoDic,superViewName):
 		for key in infoDic:
-			print(key,' == ')
+			print(cls,key,' == ')
 		
 		print('=========')
 		
 		codes.append(self.generateHierarchy(superViewName, cls, infoDic))
 		if 'subviews' in infoDic:
 			for key in infoDic['subviews']:
-				clsDic = infoDic['subviews'][key]
-				self.recursionViews(codes, key, clsDic,infoDic['id'])
+				clsDic = infoDic['subviews'][key]		
+				if type(clsDic) == dict:
+					self.recursionViews(codes, key, clsDic,infoDic['id'])					
+				if type(clsDic) == list:
+					for dic in clsDic:
+						self.recursionViews(codes, key, dic,dic['id'])					
+
+							
+
 		
 		return codes;			
 	

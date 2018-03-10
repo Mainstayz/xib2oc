@@ -1,683 +1,254 @@
 {
-    "document": {
-        "colorMatched": "YES",
-        "targetRuntime": "iOS.CocoaTouch",
-        "useTraitCollections": "YES",
-        "useSafeAreas": "YES",
-        "propertyAccessControl": "none",
-        "objects": {
-            "view": {
-                "rect": {
-                    "x": 0,
-                    "width": 375,
-                    "y": 0,
+  "document": {
+    "colorMatched": "YES",
+    "targetRuntime": "iOS.CocoaTouch",
+    "useTraitCollections": "YES",
+    "useSafeAreas": "YES",
+    "propertyAccessControl": "none",
+    "objects": {
+      "view": {
+        "rect": {
+          "x": 0,
+          "width": 375,
+          "y": 0,
+          "key": "frame",
+          "height": 667
+        },
+        "viewLayoutGuide": {
+          "id": "vUN-kp-3ea",
+          "key": "safeArea"
+        },
+        "color": {
+          "red": 1,
+          "colorSpace": "custom",
+          "green": 1,
+          "blue": 1,
+          "alpha": 1,
+          "customColorSpace": "sRGB",
+          "key": "backgroundColor"
+        },
+        "subviews": {
+          "view": [
+            {
+              "rect": {
+                "x": 87,
+                "width": 240,
+                "y": 56,
+                "key": "frame",
+                "height": 128
+              },
+              "fixedFrame": "YES",
+              "translatesAutoresizingMaskIntoConstraints": "NO",
+              "color": {
+                "red": "0.074664540588855743",
+                "colorSpace": "custom",
+                "green": "0.50027865171432495",
+                "blue": "0.99480956792831421",
+                "alpha": 1,
+                "customColorSpace": "sRGB",
+                "key": "backgroundColor"
+              },
+              "subviews": {
+                "view": {
+                  "rect": {
+                    "x": -81,
+                    "width": 240,
+                    "y": -8,
                     "key": "frame",
-                    "height": 667
-                },
-                "viewLayoutGuide": {
-                    "id": "vUN-kp-3ea",
-                    "key": "safeArea"
-                },
-                "color": {
-                    "red": 1,
+                    "height": 128
+                  },
+                  "fixedFrame": "YES",
+                  "translatesAutoresizingMaskIntoConstraints": "NO",
+                  "color": {
+                    "red": 0,
                     "colorSpace": "custom",
-                    "green": 1,
-                    "blue": 1,
+                    "green": "0.56284224989999998",
+                    "blue": "0.31881666180000001",
                     "alpha": 1,
                     "customColorSpace": "sRGB",
                     "key": "backgroundColor"
-                },
-                "subviews": {
-                    "slider": {
-                        "rect": {
-                            "x": 122,
-                            "width": 118,
-                            "y": 99,
-                            "key": "frame",
-                            "height": 30
-                        },
-                        "fixedFrame": "YES",
-                        "contentHorizontalAlignment": "center",
-                        "minValue": 0,
-                        "opaque": "NO",
-                        "translatesAutoresizingMaskIntoConstraints": "NO",
-                        "contentMode": "scaleToFill",
-                        "contentVerticalAlignment": "center",
-                        "maxValue": 1,
-                        "autoresizingMask": {
-                            "flexibleMaxX": "YES",
-                            "key": "autoresizingMask",
-                            "flexibleMaxY": "YES"
-                        },
-                        "id": "pab-og-Hiv",
-                        "value": 0.5
-                    },
-                    "imageView": {
-                        "rect": {
-                            "x": 69,
-                            "width": 240,
-                            "y": 339,
-                            "key": "frame",
-                            "height": 128
-                        },
-                        "fixedFrame": "YES",
-                        "verticalHuggingPriority": 251,
-                        "translatesAutoresizingMaskIntoConstraints": "NO",
-                        "contentMode": "scaleToFill",
-                        "autoresizingMask": {
-                            "flexibleMaxX": "YES",
-                            "key": "autoresizingMask",
-                            "flexibleMaxY": "YES"
-                        },
-                        "userInteractionEnabled": "NO",
-                        "horizontalHuggingPriority": 251,
-                        "id": "MeR-Co-anC"
-                    },
-                    "label": {
-                        "opaque": "NO",
-                        "baselineAdjustment": "alignBaselines",
-                        "autoresizingMask": {
-                            "flexibleMaxX": "YES",
-                            "key": "autoresizingMask",
-                            "flexibleMaxY": "YES"
-                        },
-                        "fontDescription": {
-                            "pointSize": 17,
-                            "type": "system",
-                            "key": "fontDescription"
-                        },
-                        "nil": [
-                                {
-                                "key": "textColor"
-                                },
-                                {
-                                "key": "highlightedColor"
-                                }
-                                ],
-                        "rect": {
-                            "x": 24,
-                            "width": 42,
-                            "y": 30,
-                            "key": "frame",
-                            "height": 21
-                        },
-                        "fixedFrame": "YES",
-                        "verticalHuggingPriority": 251,
-                        "translatesAutoresizingMaskIntoConstraints": "NO",
-                        "contentMode": "left",
-                        "textAlignment": "natural",
-                        "adjustsFontSizeToFit": "NO",
-                        "userInteractionEnabled": "NO",
-                        "horizontalHuggingPriority": 251,
-                        "text": "Label",
-                        "id": "sxd-mi-oWX",
-                        "lineBreakMode": "tailTruncation"
-                    },
-                    "segmentedControl": {
-                        "rect": {
-                            "x": 203,
-                            "width": 121,
-                            "y": 42,
-                            "key": "frame",
-                            "height": 28
-                        },
-                        "fixedFrame": "YES",
-                        "contentHorizontalAlignment": "left",
-                        "opaque": "NO",
-                        "translatesAutoresizingMaskIntoConstraints": "NO",
-                        "contentMode": "scaleToFill",
-                        "contentVerticalAlignment": "top",
-                        "autoresizingMask": {
-                            "flexibleMaxX": "YES",
-                            "key": "autoresizingMask",
-                            "flexibleMaxY": "YES"
-                        },
-                        "segmentControlStyle": "plain",
-                        "selectedSegmentIndex": 0,
-                        "id": "7JR-ZB-b0U",
-                        "segments": {
-                            "segment": [
-                                        {
-                                        "title": "First"
-                                        },
-                                        {
-                                        "title": "Second"
-                                        }
-                                        ]
-                        }
-                    },
-                    "textField": {
-                        "opaque": "NO",
-                        "autoresizingMask": {
-                            "flexibleMaxX": "YES",
-                            "key": "autoresizingMask",
-                            "flexibleMaxY": "YES"
-                        },
-                        "fontDescription": {
-                            "pointSize": 14,
-                            "type": "system",
-                            "key": "fontDescription"
-                        },
-                        "nil": {
-                            "key": "textColor"
-                        },
-                        "rect": {
-                            "x": 8,
-                            "width": 97,
-                            "y": 99,
-                            "key": "frame",
-                            "height": 30
-                        },
-                        "fixedFrame": "YES",
-                        "contentHorizontalAlignment": "left",
-                        "translatesAutoresizingMaskIntoConstraints": "NO",
-                        "contentMode": "scaleToFill",
-                        "contentVerticalAlignment": "center",
-                        "textInputTraits": {
-                            "key": "textInputTraits"
-                        },
-                        "textAlignment": "natural",
-                        "minimumFontSize": 17,
-                        "id": "iLU-Mt-Czu",
-                        "borderStyle": "roundedRect"
-                    },
-                    "switch": {
-                        "rect": {
-                            "x": 284,
-                            "width": 49,
-                            "y": 97,
-                            "key": "frame",
-                            "height": 31
-                        },
-                        "fixedFrame": "YES",
-                        "contentHorizontalAlignment": "center",
-                        "opaque": "NO",
-                        "verticalHuggingPriority": 750,
-                        "translatesAutoresizingMaskIntoConstraints": "NO",
-                        "contentMode": "scaleToFill",
-                        "contentVerticalAlignment": "center",
-                        "autoresizingMask": {
-                            "flexibleMaxX": "YES",
-                            "key": "autoresizingMask",
-                            "flexibleMaxY": "YES"
-                        },
-                        "horizontalHuggingPriority": 750,
-                        "id": "4Mg-Xb-5cd",
-                        "on": "YES"
-                    },
-                    "button": {
-                        "rect": {
-                            "x": 114,
-                            "width": 46,
-                            "y": 30,
-                            "key": "frame",
-                            "height": 30
-                        },
-                        "fixedFrame": "YES",
-                        "contentHorizontalAlignment": "center",
-                        "opaque": "NO",
-                        "buttonType": "roundedRect",
-                        "translatesAutoresizingMaskIntoConstraints": "NO",
-                        "contentMode": "scaleToFill",
-                        "contentVerticalAlignment": "center",
-                        "autoresizingMask": {
-                            "flexibleMaxX": "YES",
-                            "key": "autoresizingMask",
-                            "flexibleMaxY": "YES"
-                        },
-                        "id": "vm5-18-e0T",
-                        "state": {
-                            "title": "Button",
-                            "key": "normal"
-                        },
-                        "lineBreakMode": "middleTruncation"
-                    },
+                  },
+                  "subviews": {
                     "view": {
-                        "autoresizesSubviews": "NO",
-                        "opaque": "NO",
-                        "hidden": "YES",
-                        "color": [
-                                  {
-                                  "colorSpace": "custom",
-                                  "white": "0.66666666666666663",
-                                  "alpha": 1,
-                                  "customColorSpace": "genericGamma22GrayColorSpace",
-                                  "key": "backgroundColor"
-                                  },
-                                  {
-                                  "red": 1,
-                                  "colorSpace": "custom",
-                                  "green": "0.83015773116334923",
-                                  "blue": 0.39770596420388293,
-                                  "alpha": 1,
-                                  "customColorSpace": "sRGB",
-                                  "key": "tintColor"
-                                  }
-                                  ],
-                        "autoresizingMask": {
-                            "flexibleMaxX": "YES",
-                            "key": "autoresizingMask",
-                            "flexibleMaxY": "YES"
+                      "rect": [
+                        {
+                          "x": -8,
+                          "width": 240,
+                          "y": 104,
+                          "key": "frame",
+                          "height": 128
                         },
-                        "customModule": "Charts",
-                        "multipleTouchEnabled": "YES",
-                        "semanticContentAttribute": "forceLeftToRight",
-                        "rect": [
-                                 {
-                                 "x": 61,
-                                 "width": 240,
-                                 "y": 225,
-                                 "key": "frame",
-                                 "height": 128
-                                 },
-                                 {
-                                 "x": "0.20000000000000001",
-                                 "width": "0.40000000000000002",
-                                 "y": "0.29999999999999999",
-                                 "key": "contentStretch",
-                                 "height": 0.5
-                                 }
-                                 ],
-                        "clearsContextBeforeDrawing": "NO",
-                        "fixedFrame": "YES",
-                        "translatesAutoresizingMaskIntoConstraints": "NO",
-                        "contentMode": "scaleToFill",
-                        "alpha": "0.94999999999999996",
-                        "customClass": "BarChartView",
-                        "userDefinedRuntimeAttributes": {
-                            "userDefinedRuntimeAttribute": [
-                                                            {
-                                                            "keyPath": "pttt",
-                                                            "type": "string",
-                                                            "value": "asd"
-                                                            },
-                                                            {
-                                                            "keyPath": "keyPath",
-                                                            "type": "boolean",
-                                                            "value": "YES"
-                                                            }
-                                                            ]
+                        {
+                          "x": "0.050000000000000003",
+                          "width": "0.94999999999999996",
+                          "y": "0.050000000000000003",
+                          "key": "contentStretch",
+                          "height": "0.94999999999999996"
+                        }
+                      ],
+                      "fixedFrame": "YES",
+                      "translatesAutoresizingMaskIntoConstraints": "NO",
+                      "color": [
+                        {
+                          "colorSpace": "custom",
+                          "white": "0.66666666666666663",
+                          "alpha": 1,
+                          "customColorSpace": "genericGamma22GrayColorSpace",
+                          "key": "backgroundColor"
                         },
-                        "restorationIdentifier": 33,
-                        "tag": 1220,
-                        "id": "2Gd-j0-l11",
-                        "clipsSubviews": "YES"
-                    },
-                    "stepper": {
-                        "opaque": "NO",
-                        "verticalCompressionResistancePriority": 4,
-                        "rect": {
-                            "x": 137,
-                            "width": 94,
-                            "y": 275,
-                            "key": "frame",
-                            "height": 29
-                        },
-                        "horizontalCompressionResistancePriority": 3,
-                        "contentHorizontalAlignment": "center",
-                        "verticalHuggingPriority": 2,
-                        "translatesAutoresizingMaskIntoConstraints": "NO",
-                        "contentMode": "scaleToFill",
-                        "contentVerticalAlignment": "center",
-                        "horizontalHuggingPriority": 1,
-                        "id": "nDe-fb-AQl",
-                        "misplaced": "YES",
-                        "maximumValue": 100
-                    },
-                    "activityIndicatorView": {
-                        "rect": {
-                            "x": 46,
-                            "width": 20,
-                            "y": 158,
-                            "key": "frame",
-                            "height": 20
-                        },
-                        "fixedFrame": "YES",
-                        "opaque": "NO",
-                        "verticalHuggingPriority": 750,
-                        "translatesAutoresizingMaskIntoConstraints": "NO",
-                        "contentMode": "scaleToFill",
-                        "autoresizingMask": {
-                            "flexibleMaxX": "YES",
-                            "key": "autoresizingMask",
-                            "flexibleMaxY": "YES"
-                        },
-                        "horizontalHuggingPriority": 750,
-                        "style": "gray",
-                        "id": "cVU-zc-ImN"
-                    },
-                    "progressView": {
-                        "rect": {
-                            "x": 114,
-                            "width": 150,
-                            "y": 176,
-                            "key": "frame",
-                            "height": 2
-                        },
-                        "fixedFrame": "YES",
-                        "opaque": "NO",
-                        "verticalHuggingPriority": 750,
-                        "translatesAutoresizingMaskIntoConstraints": "NO",
-                        "contentMode": "scaleToFill",
-                        "autoresizingMask": {
-                            "flexibleMaxX": "YES",
-                            "key": "autoresizingMask",
-                            "flexibleMaxY": "YES"
-                        },
-                        "progress": 0.5,
-                        "id": "l9C-o1-AsW"
-                    },
-                    "webView": {
-                        "rect": {
-                            "x": 84,
-                            "width": 240,
-                            "y": 539,
-                            "key": "frame",
-                            "height": 128
-                        },
-                        "fixedFrame": "YES",
-                        "translatesAutoresizingMaskIntoConstraints": "NO",
-                        "color": {
-                            "red": "0.36078431370000003",
-                            "colorSpace": "custom",
-                            "green": "0.38823529410000002",
-                            "blue": 0.4039215686,
-                            "alpha": 1,
-                            "customColorSpace": "sRGB",
-                            "key": "backgroundColor"
-                        },
-                        "contentMode": "scaleToFill",
-                        "autoresizingMask": {
-                            "flexibleMaxX": "YES",
-                            "key": "autoresizingMask",
-                            "flexibleMaxY": "YES"
-                        },
-                        "id": "C5E-sZ-8Gq"
-                    },
-                    "textView": {
-                        "rect": {
-                            "x": 69,
-                            "width": 240,
-                            "y": 490,
-                            "key": "frame",
-                            "height": 128
-                        },
-                        "fixedFrame": "YES",
-                        "translatesAutoresizingMaskIntoConstraints": "NO",
-                        "color": {
-                            "colorSpace": "custom",
-                            "white": 1,
-                            "alpha": 1,
-                            "customColorSpace": "genericGamma22GrayColorSpace",
-                            "key": "backgroundColor"
-                        },
-                        "contentMode": "scaleToFill",
-                        "textInputTraits": {
-                            "autocapitalizationType": "sentences",
-                            "key": "textInputTraits"
-                        },
-                        "autoresizingMask": {
-                            "flexibleMaxX": "YES",
-                            "key": "autoresizingMask",
-                            "flexibleMaxY": "YES"
-                        },
-                        "id": "dfj-jw-hiY",
-                        "attributedString": {
-                            "fragment": [
-                                         {
-                                         "attributes": {
-                                         "color": {
-                                         "red": 1,
-                                         "colorSpace": "custom",
-                                         "green": 0,
-                                         "blue": "0.95666110710516339",
-                                         "alpha": 1,
-                                         "customColorSpace": "sRGB",
-                                         "key": "NSColor"
-                                         },
-                                         "font": {
-                                         "size": 11,
-                                         "name": ".AppleSystemUIFont",
-                                         "key": "NSFont"
-                                         }
-                                         },
-                                         "content": "Lorem ipsum dolor sit er elit lamet"
-                                         },
-                                         {
-                                         "attributes": {
-                                         "color": {
-                                         "red": 1,
-                                         "colorSpace": "custom",
-                                         "green": 0,
-                                         "blue": "0.95666110710516339",
-                                         "alpha": 1,
-                                         "customColorSpace": "sRGB",
-                                         "key": "NSColor"
-                                         },
-                                         "font": {
-                                         "size": 11,
-                                         "name": ".PingFangSC-Regular",
-                                         "key": "NSFont"
-                                         }
-                                         },
-                                         "content": ","
-                                         },
-                                         {
-                                         "attributes": {
-                                         "color": {
-                                         "red": 1,
-                                         "colorSpace": "custom",
-                                         "green": 0,
-                                         "blue": "0.95666110710516339",
-                                         "alpha": 1,
-                                         "customColorSpace": "sRGB",
-                                         "key": "NSColor"
-                                         },
-                                         "font": {
-                                         "size": 11,
-                                         "name": ".AppleSystemUIFont",
-                                         "key": "NSFont"
-                                         }
-                                         },
-                                         "content": " consectetaur cillium adipisicing pecu"
-                                         },
-                                         {
-                                         "attributes": {
-                                         "color": {
-                                         "red": 1,
-                                         "colorSpace": "custom",
-                                         "green": 0,
-                                         "blue": "0.95666110710516339",
-                                         "alpha": 1,
-                                         "customColorSpace": "sRGB",
-                                         "key": "NSColor"
-                                         },
-                                         "font": {
-                                         "size": 11,
-                                         "name": ".PingFangSC-Regular",
-                                         "key": "NSFont"
-                                         }
-                                         },
-                                         "content": ","
-                                         },
-                                         {
-                                         "attributes": {
-                                         "color": {
-                                         "red": 1,
-                                         "colorSpace": "custom",
-                                         "green": 0,
-                                         "blue": "0.95666110710516339",
-                                         "alpha": 1,
-                                         "customColorSpace": "sRGB",
-                                         "key": "NSColor"
-                                         },
-                                         "font": {
-                                         "size": 11,
-                                         "name": ".AppleSystemUIFont",
-                                         "key": "NSFont"
-                                         }
-                                         },
-                                         "content": " sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mi"
-                                         },
-                                         {
-                                         "attributes": {
-                                         "font": {
-                                         "size": 11,
-                                         "name": ".AppleSystemUIFont",
-                                         "key": "NSFont"
-                                         }
-                                         },
-                                         "content": "nim veniam"
-                                         },
-                                         {
-                                         "attributes": {
-                                         "font": {
-                                         "size": 11,
-                                         "name": ".PingFangSC-Regular",
-                                         "key": "NSFont"
-                                         }
-                                         },
-                                         "content": ","
-                                         },
-                                         {
-                                         "string": {
-                                         "key": "content",
-                                         "content": "quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident"
-                                         },
-                                         "attributes": {
-                                         "font": {
-                                         "size": 11,
-                                         "name": ".AppleSystemUIFont",
-                                         "key": "NSFont"
-                                         }
-                                         }
-                                         },
-                                         {
-                                         "attributes": {
-                                         "font": {
-                                         "size": 11,
-                                         "name": ".PingFangSC-Regular",
-                                         "key": "NSFont"
-                                         }
-                                         },
-                                         "content": ","
-                                         },
-                                         {
-                                         "string": {
-                                         "key": "content",
-                                         "content": "sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."
-                                         },
-                                         "attributes": {
-                                         "font": {
-                                         "size": 11,
-                                         "name": ".AppleSystemUIFont",
-                                         "key": "NSFont"
-                                         }
-                                         }
-                                         }
-                                         ],
-                            "key": "attributedText"
-                        },
-                        "clipsSubviews": "YES",
-                        "multipleTouchEnabled": "YES",
-                        "usesAttributedText": "YES"
-                    },
-                    "pageControl": {
-                        "rect": {
-                            "x": 137,
-                            "width": 39,
-                            "y": 230,
-                            "key": "frame",
-                            "height": 37
-                        },
-                        "fixedFrame": "YES",
-                        "contentHorizontalAlignment": "center",
-                        "opaque": "NO",
-                        "translatesAutoresizingMaskIntoConstraints": "NO",
-                        "numberOfPages": 3,
-                        "contentMode": "scaleToFill",
-                        "contentVerticalAlignment": "center",
-                        "autoresizingMask": {
-                            "flexibleMaxX": "YES",
-                            "key": "autoresizingMask",
-                            "flexibleMaxY": "YES"
-                        },
-                        "id": "RWK-us-LEy"
+                        {
+                          "red": "0.57416242360000003",
+                          "colorSpace": "custom",
+                          "green": 0.5606397743,
+                          "blue": "0.86088760220000005",
+                          "alpha": 1,
+                          "customColorSpace": "sRGB",
+                          "key": "tintColor"
+                        }
+                      ],
+                      "contentMode": "scaleAspectFit",
+                      "alpha": "0.84999999999999998",
+                      "autoresizingMask": {
+                        "flexibleMaxX": "YES",
+                        "key": "autoresizingMask",
+                        "flexibleMaxY": "YES"
+                      },
+                      "tag": 4,
+                      "id": "yCJ-hl-Axo",
+                      "clipsSubviews": "YES",
+                      "multipleTouchEnabled": "YES",
+                      "semanticContentAttribute": "playback"
                     }
-                },
-                "contentMode": "scaleToFill",
-                "autoresizingMask": {
-                    "heightSizable": "YES",
-                    "widthSizable": "YES",
-                    "key": "autoresizingMask"
-                },
-                "id": "iN0-l3-epB",
-                "constraints": {
-                    "constraint": [
-                                   {
-                                   "firstAttribute": "centerY",
-                                   "secondItem": "iN0-l3-epB",
-                                   "secondAttribute": "centerY",
-                                   "firstItem": "nDe-fb-AQl",
-                                   "id": "Im1-3e-p33"
-                                   },
-                                   {
-                                   "firstAttribute": "centerX",
-                                   "secondItem": "iN0-l3-epB",
-                                   "secondAttribute": "centerX",
-                                   "firstItem": "nDe-fb-AQl",
-                                   "id": "nca-iW-KFO"
-                                   }
-                                   ]
-                },
-                "point": {
-                    "x": 34.5,
-                    "y": 54.5,
-                    "key": "canvasLocation"
+                  },
+                  "contentMode": "scaleToFill",
+                  "autoresizingMask": {
+                    "flexibleMaxX": "YES",
+                    "key": "autoresizingMask",
+                    "flexibleMaxY": "YES"
+                  },
+                  "customClass": "BBBB",
+                  "userDefinedRuntimeAttributes": {
+                    "userDefinedRuntimeAttribute": {
+                      "keyPath": "layer.corner",
+                      "integer": {
+                        "value": 22,
+                        "key": "value"
+                      },
+                      "type": "number"
+                    }
+                  },
+                  "restorationIdentifier": "rty",
+                  "id": "YLU-cV-z1b"
                 }
+              },
+              "contentMode": "scaleToFill",
+              "autoresizingMask": {
+                "flexibleMaxX": "YES",
+                "key": "autoresizingMask",
+                "flexibleMaxY": "YES"
+              },
+              "id": "zaY-UA-XQT"
             },
-            "placeholder": [
-                            {
-                            "placeholderIdentifier": "IBFilesOwner",
-                            "userLabel": "File's Owner",
-                            "id": -1
-                            },
-                            {
-                            "placeholderIdentifier": "IBFirstResponder",
-                            "customClass": "UIResponder",
-                            "id": -2
-                            }
-                            ]
-        },
-        "toolsVersion": 13771,
-        "type": "com.apple.InterfaceBuilder3.CocoaTouch.XIB",
-        "version": 3,
-        "useAutolayout": "YES",
-        "device": {
-            "orientation": "portrait",
-            "adaptation": {
-                "id": "fullscreen"
+            {
+              "rect": {
+                "x": 49,
+                "width": 240,
+                "y": 372,
+                "key": "frame",
+                "height": 128
+              },
+              "fixedFrame": "YES",
+              "translatesAutoresizingMaskIntoConstraints": "NO",
+              "color": {
+                "cocoaTouchSystemColor": "scrollViewTexturedBackgroundColor",
+                "key": "backgroundColor"
+              },
+              "contentMode": "scaleToFill",
+              "autoresizingMask": {
+                "flexibleMaxX": "YES",
+                "key": "autoresizingMask",
+                "flexibleMaxY": "YES"
+              },
+              "id": "fgS-lx-P6Z"
             },
-            "id": "retina4_7"
-        },
-        "dependencies": {
-            "capability": [
-                           {
-                           "name": "Safe area layout guides",
-                           "minToolsVersion": 9
-                           },
-                           {
-                           "name": "documents saved in the Xcode 8 format",
-                           "minToolsVersion": 8
-                           }
-                           ],
-            "plugIn": {
-                "identifier": "com.apple.InterfaceBuilder.IBCocoaTouchPlugin",
-                "version": 13772
-            },
-            "deployment": {
-                "identifier": "iOS"
+            {
+              "rect": {
+                "x": 37,
+                "width": 240,
+                "y": 479,
+                "key": "frame",
+                "height": 128
+              },
+              "fixedFrame": "YES",
+              "translatesAutoresizingMaskIntoConstraints": "NO",
+              "color": {
+                "colorSpace": "custom",
+                "white": 1,
+                "alpha": 1,
+                "customColorSpace": "genericGamma22GrayColorSpace",
+                "key": "backgroundColor"
+              },
+              "contentMode": "scaleToFill",
+              "autoresizingMask": {
+                "flexibleMaxX": "YES",
+                "key": "autoresizingMask",
+                "flexibleMaxY": "YES"
+              },
+              "id": "07l-df-VQq",
+              "semanticContentAttribute": "spatial"
             }
+          ]
+        },
+        "contentMode": "scaleToFill",
+        "autoresizingMask": {
+          "heightSizable": "YES",
+          "widthSizable": "YES",
+          "key": "autoresizingMask"
+        },
+        "id": "iN0-l3-epB"
+      },
+      "placeholder": [
+        {
+          "placeholderIdentifier": "IBFilesOwner",
+          "userLabel": "File's Owner",
+          "id": -1
+        },
+        {
+          "placeholderIdentifier": "IBFirstResponder",
+          "customClass": "UIResponder",
+          "id": -2
         }
+      ]
+    },
+    "toolsVersion": 13771,
+    "type": "com.apple.InterfaceBuilder3.CocoaTouch.XIB",
+    "version": 3,
+    "useAutolayout": "YES",
+    "device": {
+      "orientation": "portrait",
+      "adaptation": {
+        "id": "fullscreen"
+      },
+      "id": "retina4_7"
+    },
+    "dependencies": {
+      "capability": [
+        {
+          "name": "Safe area layout guides",
+          "minToolsVersion": 9
+        },
+        {
+          "name": "documents saved in the Xcode 8 format",
+          "minToolsVersion": 8
+        }
+      ],
+      "plugIn": {
+        "identifier": "com.apple.InterfaceBuilder.IBCocoaTouchPlugin",
+        "version": 13772
+      },
+      "deployment": {
+        "identifier": "iOS"
+      }
     }
+  }
 }
